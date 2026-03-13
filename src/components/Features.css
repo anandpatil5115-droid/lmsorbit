@@ -1,0 +1,114 @@
+.features {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 50%, var(--bg) 100%);
+}
+
+.features__heading {
+  text-align: center;
+  margin-bottom: 64px;
+  opacity: 0;
+}
+
+.features__heading .section-subtitle {
+  margin: 0 auto;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.feature-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.feature-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--color) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color) 30%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.feature-card:hover .feature-card__icon-wrap {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color) 40%, transparent);
+}
+
+.feature-card__stat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--color) 12%, transparent);
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid color-mix(in srgb, var(--color) 25%, transparent);
+}
+
+.feature-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.feature-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.feature-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-card__link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.feature-card:hover .feature-card__link {
+  letter-spacing: 0.02em;
+}
+
+/* Glow on hover */
+.feature-card__glow {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, var(--glow), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.feature-card:hover .feature-card__glow { opacity: 0.25; }
+
+@media (max-width: 640px) {
+  .features__grid { grid-template-columns: 1fr; }
+}
