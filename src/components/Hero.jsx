@@ -37,8 +37,10 @@ export default function Hero() {
       })
 
       // Orbs drifting
-      gsap.to(orb1Ref.current, { x: 60, y: -40, duration: 8, ease: 'sine.inOut', yoyo: true, repeat: -1 })
-      gsap.to(orb2Ref.current, { x: -50, y: 60, duration: 10, ease: 'sine.inOut', yoyo: true, repeat: -1 })
+      if (orb1Ref.current && orb2Ref.current) {
+        gsap.to(orb1Ref.current, { x: 60, y: -40, duration: 8, ease: 'sine.inOut', yoyo: true, repeat: -1 })
+        gsap.to(orb2Ref.current, { x: -50, y: 60, duration: 10, ease: 'sine.inOut', yoyo: true, repeat: -1 })
+      }
 
     // Parallax on mouse move
       const onMove = (e) => {
@@ -79,7 +81,7 @@ export default function Hero() {
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: 'clamp(72px, 9vw, 120px)',
               color: 'transparent',
-              WebkitTextStroke: '2px #1e1b4b',
+              WebkitTextStroke: '2px #b4bcf4',
               display: 'block',
               lineHeight: 0.95,
               letterSpacing: '-1px'
@@ -96,7 +98,7 @@ export default function Hero() {
             <span style={{
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: 'clamp(72px, 9vw, 120px)',
-              color: '#0f0a1e',
+              color: '#eaeaff',
               display: 'block',
               lineHeight: 0.95,
               letterSpacing: '-1px'
