@@ -40,15 +40,22 @@ export default function Hero() {
       gsap.to(orb1Ref.current, { x: 60, y: -40, duration: 8, ease: 'sine.inOut', yoyo: true, repeat: -1 })
       gsap.to(orb2Ref.current, { x: -50, y: 60, duration: 10, ease: 'sine.inOut', yoyo: true, repeat: -1 })
 
-      // Parallax on mouse move
+    // Parallax on mouse move
       const onMove = (e) => {
+        if (typeof window === 'undefined') return;
         const x = (e.clientX / window.innerWidth - 0.5) * 30
         const y = (e.clientY / window.innerHeight - 0.5) * 20
         gsap.to('.hero__visual', { rotateY: x * 0.3, rotateX: -y * 0.3, duration: 1.2, ease: 'power2.out' })
         gsap.to(orb1Ref.current, { x: x * 1.5, y: y * 1.5, duration: 2, ease: 'power2.out' })
       }
-      window.addEventListener('mousemove', onMove)
-      return () => window.removeEventListener('mousemove', onMove)
+      if (typeof window !== 'undefined') {
+        window.addEventListener('mousemove', onMove)
+      }
+      return () => {
+        if (typeof window !== 'undefined') {
+           window.removeEventListener('mousemove', onMove)
+        }
+      }
     }, heroRef)
 
     return () => ctx.revert()
