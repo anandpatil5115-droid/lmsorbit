@@ -6,10 +6,10 @@ import './Demo.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const coursesList = [
-  { name: 'Advanced React Patterns', cat: 'Development', students: 2400, prog: 75, color: '#7c5cfc' },
-  { name: 'UI/UX Masterclass', cat: 'Design', students: 1800, prog: 60, color: '#c471ed' },
-  { name: 'Data Science Bootcamp', cat: 'Analytics', students: 3100, prog: 88, color: '#22d9a7' },
-  { name: 'Business Strategy 101', cat: 'Business', students: 950, prog: 42, color: '#ff8c42' },
+  { name: 'Customer Support Lead', cat: 'Support', students: 24000, prog: 98, color: '#00F0FF' },
+  { name: 'Data Extraction Bot', cat: 'Operations', students: 18000, prog: 85, color: '#c471ed' },
+  { name: 'Lead Qualified Agent', cat: 'Sales', students: 31000, prog: 92, color: '#22d9a7' },
+  { name: 'Invoice Processing', cat: 'Finance', students: 9500, prog: 78, color: '#ff8c42' },
 ]
 
 const stats = [
@@ -65,7 +65,7 @@ export default function Demo() {
             <span className="gradient-text">in action</span>
           </h2>
           <p className="section-subtitle">
-            A powerful dashboard that gives instructors and admins everything at a glance.
+            A powerful edge-dashboard that gives operators everything at a glance.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function Demo() {
           {/* Sidebar + Main */}
           <div className="demo__body">
             <aside className="demo__sidebar">
-              {['🏠 Overview', '📚 Courses', '👥 Students', '📊 Analytics', '💬 Messages', '⚙️ Settings'].map(item => (
+              {['🏠 Overview', '🤖 AI Agents', '📊 Analytics', '💻 API Logs', '💬 Dialogues', '⚙️ Settings'].map(item => (
                 <div key={item} className={`demo__sidebar-item ${item.includes('Analytics') ? 'demo__sidebar-item--active' : ''}`}>
                   {item}
                 </div>
@@ -107,7 +107,7 @@ export default function Demo() {
               {/* Courses list */}
               <div className="demo__courses">
                 <div className="demo__courses-header">
-                  <span>Top Courses</span>
+                  <span>Active Agents</span>
                   <span style={{ color: 'var(--accent)', fontSize: '0.78rem', cursor: 'pointer' }}>View All</span>
                 </div>
                 {coursesList.map(c => (
@@ -117,7 +117,7 @@ export default function Demo() {
                     </div>
                     <div className="demo__course-info">
                       <div className="demo__course-name">{c.name}</div>
-                      <div className="demo__course-meta">{c.cat} · {c.students.toLocaleString()} students</div>
+                      <div className="demo__course-meta">{c.cat} · {c.students.toLocaleString()} requests</div>
                     </div>
                     <div className="demo__course-prog">
                       <div style={{ fontSize: '0.75rem', textAlign: 'right', marginBottom: '4px', color: c.color }}>{c.prog}%</div>

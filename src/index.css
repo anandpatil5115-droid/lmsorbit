@@ -178,3 +178,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section { padding: 80px 0; }
   .btn { padding: 12px 22px; font-size: 0.85rem; }
 }
+
+/* ===== SPLINE CURSOR TRACKING ===== */
+/* Allow mouse events to pass through to the Spline iframe for cursor tracking */
+.dot-overlay {
+  pointer-events: none;
+}

@@ -8,48 +8,48 @@ gsap.registerPlugin(ScrollTrigger)
 const testimonials = [
   {
     name: 'Sarah Mitchell',
-    role: 'Senior UX Designer',
+    role: 'Senior Operations Manager',
     company: 'Accenture',
     avatar: 'SM',
-    color: '#7c5cfc',
+    color: '#7C3AED',
     rating: 5,
-    text: 'LearnFlow completely transformed how our team upskills. The course builder is intuitive, and analytics give us exactly the insights we need to improve outcomes.',
+    text: 'LearnFlow completely transformed how our team handles online education. The course builder is intuitive, and analytics give us exactly the insights we need to improve outcomes.',
   },
   {
     name: 'Daniel Okafor',
-    role: 'Python Instructor',
-    company: 'Indie Creator',
+    role: 'Technical Lead',
+    company: 'Indie Startup',
     avatar: 'DO',
-    color: '#22d9a7',
+    color: '#00F0FF',
     rating: 5,
-    text: 'I launched my first course in 2 hours. After 3 months I had 4,000 students and $18K in revenue. The platform handles everything so I can focus on teaching.',
+    text: 'I launched my first automated workflow in 2 hours. After 3 months it handles 4,000 requests daily. The platform handles everything so I can focus on building products.',
   },
   {
     name: 'Priya Nair',
-    role: 'L&D Director',
+    role: 'Director of CX',
     company: 'FinEdge Corp',
     avatar: 'PN',
     color: '#c471ed',
     rating: 5,
-    text: 'We migrated from a legacy LMS and the difference is night and day. Student engagement went up 170%. The onboarding team was incredibly supportive.',
+    text: 'We migrated from a legacy bot provider and the difference is night and day. Customer satisfaction went up 170%. The onboarding team was incredibly supportive.',
   },
   {
     name: 'Marcus Chen',
-    role: 'Data Science Student',
+    role: 'Founder',
     company: 'Self-Learner',
     avatar: 'MC',
     color: '#ff8c42',
     rating: 5,
-    text: 'The adaptive quizzes keep me sharp and the progress tracking motivates me daily. I completed a 40-hour bootcamp in 6 weeks with top scores.',
+    text: 'The adaptive neural models keep support answers sharp and the real-time logging gives me peace of mind. I deployed an enterprise-grade agent in 6 weeks.',
   },
   {
     name: 'Elena Vasquez',
-    role: 'Head of Education',
+    role: 'Head of Engineering',
     company: 'TechUp Labs',
     avatar: 'EV',
-    color: '#7c5cfc',
+    color: '#7C3AED',
     rating: 5,
-    text: 'LearnFlow integrates perfectly with our HR stack. Automated certificates, SSO, and Slack notifications make administration effortless for our 500-employee org.',
+    text: 'LearnFlow integrates perfectly with our internal stack. Automated functions, SSO, and Slack notifications make administration effortless for our 500-employee org.',
   },
 ]
 
@@ -95,10 +95,10 @@ export default function Testimonials() {
         <div className="test__head" style={{ opacity: 0 }}>
           <div className="section-label">💬 Testimonials</div>
           <h2 className="section-title">
-            Loved by <span className="gradient-text">50,000+</span> learners
+            Loved by <span className="gradient-text">10,000+</span> teams
           </h2>
           <p className="section-subtitle">
-            Real stories from students and instructors who changed their lives with LearnFlow.
+            Real stories from operators and educators who scaled their education with LearnFlow.
           </p>
         </div>
 

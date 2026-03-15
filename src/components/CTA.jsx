@@ -32,20 +32,18 @@ export default function CTA() {
         <div className="cta__content" style={{ opacity: 0 }}>
           <div className="section-label">🚀 Get Started Today</div>
           <h2 className="cta__title">
-            Start Your<br />
-            <span className="gradient-text">Learning Journey</span><br />
-            Today
+            Ready to transcend<br />
+            <span className="gradient-text">human limits?</span><br />
           </h2>
           <p className="cta__subtitle">
-            Join 50,000+ students and instructors who are already transforming the way they learn and teach.
-            Your first 14 days are completely free.
+            Join the revolution today. Deploy your first intelligent AI agent without writing a single line of code.
           </p>
           <div className="cta__buttons">
-            <a href="#" className="btn btn-primary cta__btn-main">
-              <span>🎓 Start Learning — It's Free</span>
+            <a href="/login" className="btn btn-primary cta__btn-main">
+              <span>Start for Free</span>
             </a>
             <a href="#" className="btn btn-ghost">
-              📖 View All Courses
+              Contact Sales
             </a>
           </div>
 

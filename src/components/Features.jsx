@@ -7,31 +7,31 @@ gsap.registerPlugin(ScrollTrigger)
 
 const features = [
   {
-    icon: '🧱',
-    title: 'Course Builder',
-    desc: 'Drag-and-drop builder for rich multimedia lessons, quizzes, and interactive modules. Publish in minutes.',
-    color: '#7c5cfc',
-    stat: '2x faster',
-  },
-  {
-    icon: '📈',
-    title: 'Progress Tracking',
-    desc: 'Monitor every student in real-time. Detailed heatmaps, completion rates, and time-on-task analytics.',
-    color: '#22d9a7',
-    stat: '99.9% uptime',
+    icon: '⚡',
+    title: 'Lightning Fast',
+    desc: 'Process thousands of requests per second with our distributed edge architecture.',
+    color: '#00F0FF',
+    stat: '10x Faster',
   },
   {
     icon: '🧠',
-    title: 'Interactive Quizzes',
-    desc: 'Adaptive assessments with instant feedback. Auto-graded, spaced-repetition ready, and mobile-first.',
-    color: '#c471ed',
-    stat: '3M+ answered',
+    title: 'Neural Engine',
+    desc: 'Self-learning models that adapt to your specific business logic and communication style.',
+    color: '#7C3AED',
+    stat: '99.9% Uptime',
+  },
+  {
+    icon: '🔒',
+    title: 'Enterprise Security',
+    desc: 'Bank-grade encryption, SOC2 certified, and completely private by design.',
+    color: '#00F0FF',
+    stat: 'Secure',
   },
   {
     icon: '📡',
-    title: 'Analytics Dashboard',
-    desc: 'Actionable insights on revenue, engagement, and learning outcomes. Export to any BI tool seamlessly.',
-    color: '#ff8c42',
+    title: 'Analytics Edge',
+    desc: 'Actionable insights on API usage and neural pathways. Export to any BI tool seamlessly.',
+    color: '#7C3AED',
     stat: 'Live data',
   },
 ]
@@ -61,11 +61,11 @@ export default function Features() {
         <div className="features__heading">
           <div className="section-label">✨ Platform Features</div>
           <h2 className="section-title">
-            Everything you need to<br />
-            <span className="gradient-text">build & scale learning</span>
+            Next-Gen<br />
+            <span className="gradient-text">Capabilities</span>
           </h2>
           <p className="section-subtitle">
-            One platform, infinite possibilities. LearnFlow gives educators and students the tools to achieve transformational outcomes.
+            One platform, infinite possibilities. LearnFlow gives educators the tools to achieve transformational outcomes.
           </p>
         </div>
 

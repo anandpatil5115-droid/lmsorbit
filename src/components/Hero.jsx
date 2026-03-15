@@ -68,12 +68,35 @@ export default function Hero() {
           </div>
 
           <h1 className="hero__title">
-            Learn<br />
-            <span className="gradient-text">Without</span><br />
-            Limits
+            <span style={{
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: 'clamp(72px, 9vw, 120px)',
+              color: 'transparent',
+              WebkitTextStroke: '2px #1e1b4b',
+              display: 'block',
+              lineHeight: 0.95,
+              letterSpacing: '-1px'
+            }}>Learn</span>
+            <span style={{
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: 'clamp(72px, 9vw, 120px)',
+              color: '#7c3aed',
+              display: 'block',
+              lineHeight: 0.95,
+              letterSpacing: '-1px',
+              fontStyle: 'italic'
+            }}>Without</span>
+            <span style={{
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: 'clamp(72px, 9vw, 120px)',
+              color: '#0f0a1e',
+              display: 'block',
+              lineHeight: 0.95,
+              letterSpacing: '-1px'
+            }}>Limits</span>
           </h1>
 
-          <p className="hero__subtitle">
+          <p className="hero__subtitle" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '16px', color: '#475569', lineHeight: 1.7 }}>
             Build world-class courses, track every student's journey,
             and unlock real-time analytics — all from one intelligent platform.
           </p>
@@ -94,7 +117,7 @@ export default function Hero() {
               { n: '98%', label: 'Satisfaction' },
             ].map(s => (
               <div key={s.label} className="hero__stat">
-                <span className="hero__stat-num">{s.n}</span>
+                <span className="hero__stat-num" style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: '40px', color: '#0f0a1e' }}>{s.n}</span>
                 <span className="hero__stat-label">{s.label}</span>
               </div>
             ))}

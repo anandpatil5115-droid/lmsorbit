@@ -4,11 +4,13 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import Courses from './components/Courses'
 import Demo from './components/Demo'
 import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import SplineBackground from './components/SplineBackground'
 
 function App() {
   useEffect(() => {
@@ -26,12 +28,14 @@ function App() {
 
     return () => lenis.destroy()
   }, [])
-
   return (
     <div className="app">
+      <SplineBackground />
+      <div className="dot-overlay" />
       <Navbar />
       <Hero />
       <Features />
+      <Courses />
       <Demo />
       <Testimonials />
       <Pricing />

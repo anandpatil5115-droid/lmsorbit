@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #7c5cfc;
+  --primary-glow: rgba(124, 92, 252, 0.3);
+  --secondary: #c471ed;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.06);
+}
+
+.auth-modern-wrapper {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-modern-wrapper ::selection {
+  background: rgba(168, 85, 247, 0.3);
+}
+
+.auth-header {
+  font-family: 'Outfit', sans-serif;
+}
+
+.glass-card {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+}
+
+.glass-input {
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  color: #fff;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: rgba(124, 92, 252, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.premium-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.premium-btn:active {
+  transform: scale(0.95);
+}
+
+.premium-btn-primary {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.premium-btn-primary:hover {
+  background: #f3f4f6;
+}
+
+.premium-btn-glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+}
+
+.premium-btn-glass:hover {
+  background: var(--glass-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #a78bfa, #c471ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
