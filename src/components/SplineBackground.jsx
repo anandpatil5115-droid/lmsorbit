@@ -9,7 +9,8 @@ export default function SplineBackground() {
   React.useEffect(() => {
     const handleMouseMove = (e) => {
       if (!robotRef.current) return;
-      if (!rect.width || !rect.height) return;
+      const rect = robotRef.current.getBoundingClientRect();
+      if (!rect || !rect.width || !rect.height) return;
       const robotCenterX = rect.left + rect.width / 2;
       const robotCenterY = rect.top + rect.height / 2;
       
