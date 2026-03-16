@@ -5,35 +5,10 @@ import './Features.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const features = [
-  {
-    icon: '⚡',
-    title: 'Lightning Fast',
-    desc: 'Process thousands of requests per second with our distributed edge architecture.',
-    color: '#00F0FF',
-    stat: '10x Faster',
-  },
-  {
-    icon: '🧠',
-    title: 'Neural Engine',
-    desc: 'Self-learning models that adapt to your specific business logic and communication style.',
-    color: '#7C3AED',
-    stat: '99.9% Uptime',
-  },
-  {
-    icon: '🔒',
-    title: 'Enterprise Security',
-    desc: 'Bank-grade encryption, SOC2 certified, and completely private by design.',
-    color: '#00F0FF',
-    stat: 'Secure',
-  },
-  {
-    icon: '📡',
-    title: 'Analytics Edge',
-    desc: 'Actionable insights on API usage and neural pathways. Export to any BI tool seamlessly.',
-    color: '#7C3AED',
-    stat: 'Live data',
-  },
+const photos = [
+  { id: 1, src: '/photo1.jpg' },
+  { id: 2, src: '/photo2.jpg' },
+  { id: 3, src: '/photo3.jpg' }
 ]
 
 export default function Features() {
@@ -46,8 +21,8 @@ export default function Features() {
         scrollTrigger: { trigger: '.features__heading', start: 'top 80%' },
       })
 
-      gsap.fromTo('.feature-card', { opacity: 0, y: 60 }, {
-        opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+      gsap.fromTo('.photo-card', { opacity: 0, scale: 0.8, y: 50 }, {
+        opacity: 1, scale: 1, y: 0, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)',
         scrollTrigger: { trigger: '.features__grid', start: 'top 80%' },
       })
     }, sectionRef)
@@ -59,31 +34,24 @@ export default function Features() {
     <section id="features" ref={sectionRef} className="section features">
       <div className="container">
         <div className="features__heading">
-          <div className="section-label">✨ Platform Features</div>
+          <div className="section-label">✨ Just For Fun</div>
           <h2 className="section-title">
-            Next-Gen<br />
-            <span className="gradient-text">Capabilities</span>
+            Some Cool<br />
+            <span className="gradient-text">Photos</span>
           </h2>
           <p className="section-subtitle">
-            One platform, infinite possibilities. LearnFlow gives educators the tools to achieve transformational outcomes.
+            Because sometimes you just need to drop some cool pictures in instead of boring features.
           </p>
         </div>
 
-        <div className="features__grid">
-          {features.map((f) => (
-            <div key={f.title} className="feature-card glass-card">
-              <div className="feature-card__top">
-                <div className="feature-card__icon-wrap" style={{ '--color': f.color }}>
-                  <span className="feature-card__icon">{f.icon}</span>
-                </div>
-                <span className="feature-card__stat" style={{ color: f.color }}>{f.stat}</span>
-              </div>
-              <h3 className="feature-card__title">{f.title}</h3>
-              <p className="feature-card__desc">{f.desc}</p>
-              <div className="feature-card__footer">
-                <span className="feature-card__link" style={{ color: f.color }}>Learn more →</span>
-                <div className="feature-card__glow" style={{ '--glow': f.color }} />
-              </div>
+        <div className="features__grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', justifyContent: 'center' }}>
+          {photos.map((photo) => (
+            <div key={photo.id} className="photo-card glass-card" style={{ padding: '1rem', borderRadius: '24px', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+               <img 
+                 src={photo.src} 
+                 alt={`Fun photo ${photo.id}`} 
+                 style={{ width: '100%', height: 'auto', borderRadius: '16px', objectFit: 'cover', aspectRatio: '3/4' }} 
+               />
             </div>
           ))}
         </div>
