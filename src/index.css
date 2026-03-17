@@ -1,5 +1,10 @@
-/* ===== DESIGN TOKENS ===== */
 :root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --skeleton: 0 0% 90%;
+  --btn-border: 214 32% 91%;
+  --input: 220 20% 90%;
+  --blue-500: #3b82f6;
   --bg: #070710;
   --bg-2: #0c0c1a;
   --surface: rgba(255, 255, 255, 0.04);
@@ -20,14 +25,24 @@
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --foreground-rgb: 0, 0, 0;
+}
+
+.dark {
+  --background: 222 94% 5%;
+  --foreground: 0 0% 100%;
+  --skeleton: 218 36% 16%;
+  --btn-border: 217 33% 18%;
+  --input: 219 63% 16%;
+  --foreground-rgb: 255, 255, 255;
 }
 
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: auto; }
 body {
-  background: var(--bg);
-  color: var(--text-primary);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
