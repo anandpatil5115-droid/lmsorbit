@@ -5,9 +5,15 @@
 .pricing__head {
   text-align: center;
   margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.pricing__head .section-subtitle { margin: 0 auto; }
+.pricing__head .section-subtitle { 
+  margin: 0 auto; 
+  text-align: center;
+}
 
 /* Toggle */
 .pricing__toggle {
@@ -68,6 +74,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .pricing-card {
@@ -78,6 +86,20 @@
   gap: 24px;
   opacity: 0;
   transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease;
+  height: 100%;
+  min-height: 500px;
+}
+
+.pricing-.test__card {
+  flex: 0 0 calc(33.333% - 14px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease;
+  min-height: 500px;
 }
 
 .pricing-card--featured {
@@ -116,6 +138,13 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin-top: 6px;
+}
+
+.pricing-card.test__track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  align-items: stretch;
 }
 
 .pricing-card__price {

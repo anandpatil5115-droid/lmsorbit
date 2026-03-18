@@ -45,6 +45,7 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .cta__subtitle {
@@ -53,6 +54,7 @@
   line-height: 1.7;
   max-width: 520px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .cta__buttons {

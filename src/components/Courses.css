@@ -17,7 +17,10 @@
 .courses__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ===== SPOTLIGHT CARD OVERRIDES FOR COURSES ===== */
@@ -31,6 +34,7 @@
   backdrop-filter: blur(20px);
   transition: var(--transition);
   opacity: 0;
+  height: 100%;
 }
 
 .course-card:hover {

@@ -19,15 +19,23 @@
 .demo__head {
   text-align: center;
   margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.demo__head .section-subtitle { margin: 0 auto; }
+.demo__head .section-subtitle { 
+  margin: 0 auto; 
+  text-align: center;
+}
 
 .demo__window {
   padding: 0;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .demo__bar {

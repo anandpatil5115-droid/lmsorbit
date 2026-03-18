@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="navbar__inner container">
         <Link to="/" className="navbar__logo">
           <span className="navbar__logo-icon">🚀</span>
-          <span className="navbar__logo-text">SkillOrbit</span>
+          <span className="navbar__logo-text">LearnFlow</span>
         </Link>
 
         <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>

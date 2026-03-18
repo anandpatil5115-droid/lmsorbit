@@ -13,6 +13,8 @@
 .test__track-wrapper {
   overflow: hidden;
   border-radius: var(--radius-lg);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .test__track {

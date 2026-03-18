@@ -10,7 +10,7 @@ import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
-import AnimatedBackground from './components/AnimatedBackground'
+import SplineBackground from './components/SplineBackground'
 
 function App() {
   useEffect(() => {
@@ -30,18 +30,19 @@ function App() {
   }, [])
 
   return (
-    <div className="app">
-      <AnimatedBackground />
-      <div className="dot-overlay" />
-      <Navbar />
-      <Hero />
-      <Features />
-      <Courses />
-      <Demo />
-      <Testimonials />
-      <Pricing />
-      <CTA />
-      <Footer />
+    <div className="app" style={{ background: '#000' }}>
+      <SplineBackground />
+      <div className="content-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', zIndex: 10 }}>
+        <Navbar />
+        <Hero />
+        <Features />
+        <Courses />
+        <Demo />
+        <Testimonials />
+        <Pricing />
+        <CTA />
+        <Footer />
+      </div>
     </div>
   )
 }

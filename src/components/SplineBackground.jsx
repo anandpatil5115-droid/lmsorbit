@@ -1,60 +1,52 @@
-'use client';
-import React from 'react';
-import './SplineBackground.css'
-
 export default function SplineBackground() {
-  const [robotRotation, setRobotRotation] = React.useState({ x: 0, y: 0 });
-  const robotRef = React.useRef(null);
-
-  React.useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!robotRef.current) return;
-      const rect = robotRef.current.getBoundingClientRect();
-      if (!rect || !rect.width || !rect.height) return;
-      const robotCenterX = rect.left + rect.width / 2;
-      const robotCenterY = rect.top + rect.height / 2;
-      
-      const deltaX = e.clientX - robotCenterX;
-      const deltaY = e.clientY - robotCenterY;
-      
-      const rotateY = Math.max(-15, Math.min(15, deltaX / 30));
-      const rotateX = Math.max(-10, Math.min(10, -deltaY / 40));
-      
-      setRobotRotation({ x: rotateX, y: rotateY });
-    };
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('mousemove', handleMouseMove);
-    }
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('mousemove', handleMouseMove);
-      }
-    };
-  }, []);
-
   return (
-    <div className="spline-bg">
-      <div
-        ref={robotRef}
+    <div 
+      style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        width: '100vw', 
+        height: '100vh', 
+        zIndex: 0, 
+        background: '#000'
+      }}
+    >
+      <iframe 
+        src='https://my.spline.design/reactiveorb-q42vo3ZOJwAjCuFInHBHiSzL/' 
+        frameborder='0' 
+        width='100%' 
+        height='100%'
+        style={{ border: 'none' }}
+      ></iframe>
+      {/* Mask to hide the "Effortless AI" text inside the Spline scene */}
+      <div 
         style={{
-          transform: `perspective(800px) rotateX(${robotRotation.x}deg) rotateY(${robotRotation.y}deg)`,
-          transition: 'transform 0.15s ease-out',
-          willChange: 'transform',
-          display: 'inline-block',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
           width: '100%',
-          height: '100%'
+          height: '100%',
+          background: 'radial-gradient(circle at center, transparent 0%, #000 60%, #000 100%)',
+          pointerEvents: 'none',
+          zIndex: 1
         }}
-      >
-        <iframe
-          src="https://my.spline.design/genkubgreetingrobot-ebIyjNtZJkxJeSQB3NutjCwR/"
-          frameBorder="0"
-          title="3D Robot Background"
-          loading="lazy"
-        />
-      </div>
+      />
+      <div 
+        style={{
+          position: 'absolute',
+          top: '45%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '80%',
+          height: '25%',
+          background: '#000',
+          filter: 'blur(60px)',
+          opacity: 0.9,
+          pointerEvents: 'none',
+          zIndex: 1
+        }}
+      />
     </div>
-  )
+  );
 }
-
-
