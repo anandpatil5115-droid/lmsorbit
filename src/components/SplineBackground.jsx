@@ -27,7 +27,7 @@ export default function SplineBackground() {
           transform: 'translate(-50%, -50%)',
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle at center, transparent 0%, #000 60%, #000 100%)',
+          background: 'radial-gradient(circle at center, transparent 0%, #000 45%, #000 100%)',
           pointerEvents: 'none',
           zIndex: 1
         }}
@@ -35,14 +35,14 @@ export default function SplineBackground() {
       <div 
         style={{
           position: 'absolute',
-          top: '45%',
+          top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '80%',
-          height: '25%',
+          width: '600px',
+          height: '400px',
           background: '#000',
-          filter: 'blur(60px)',
-          opacity: 0.9,
+          filter: 'blur(80px)',
+          opacity: 0.95,
           pointerEvents: 'none',
           zIndex: 1
         }}
